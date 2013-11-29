@@ -37,6 +37,8 @@ TARGET_CPU_SMP := true
 #TARGET_HAVE_TEGRA_ERRATA_657451 := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 ARCH_ARM_USE_NON_NEON_MEMCPY := true
+TARGET_GLOBAL_CFLAGS += -mtune=cortex-a9 -mfpu=vfpv3-d16 -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfpu=vfpv3-d16 -mfloat-abi=softfp
 
 # Build kernel using SaberMod 4.9 toolchain
 TARGET_GCC_VERSION := 4.9
