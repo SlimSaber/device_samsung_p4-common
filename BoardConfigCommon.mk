@@ -43,6 +43,7 @@ TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfpu=vfpv3-d16 -mfloat-abi=softfp
 # Build kernel using SaberMod 4.9 toolchain
 TARGET_GCC_VERSION := 4.9
 USE_SABERMOD_ANDROIDEABI_49 := true
+TARGET_USE_O3 := true
 
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_CMDLINE := 
