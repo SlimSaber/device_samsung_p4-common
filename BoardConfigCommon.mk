@@ -40,11 +40,13 @@ ARCH_ARM_USE_NON_NEON_MEMCPY := true
 TARGET_GLOBAL_CFLAGS += -mtune=cortex-a9 -mfpu=vfpv3-d16 -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfpu=vfpv3-d16 -mfloat-abi=softfp
 
-# Build kernel using SaberMod 4.9 toolchain
-TARGET_GCC_VERSION := 4.9
+# Build rom using SaberMod 4.9 toolchain
 USE_SABERMOD_ANDROIDEABI_49 := true
+TARGET_GCC_VERSION_EXP := 4.9
 TARGET_USE_O3 := true
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.7/bin/arm-eabi-
+STRICT_ALIASING := true
+SUPPRES_UNUSED_WARNING := true
+OPT_MEMORY := true
 
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_CMDLINE := 
