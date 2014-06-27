@@ -66,7 +66,6 @@ PRODUCT_PROPERTY_OVERRIDES := \
     media.stagefright.cache-params=6144/-1/30 \
     ro.sf.lcd_density=160 \
     ro.bq.gpu_to_cpu_unsupported=1 \
-    dalvik.vm.dexopt-data-only=1 \
     debug.hwui.render_dirty_regions=false
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
