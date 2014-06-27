@@ -26,11 +26,11 @@ TARGET_SCREEN_WIDTH := 1280
 TARGET_SCREEN_HEIGHT := 800
 
 PRODUCT_COPY_FILES := \
-    $(LOCAL_PATH)/init.p3.rc:root/init.p3.rc \
-    $(LOCAL_PATH)/fstab.p3:root/fstab.p3 \
-    $(LOCAL_PATH)/ueventd.p3.rc:root/ueventd.p3.rc \
-    $(LOCAL_PATH)/lpm.rc:root/lpm.rc \
-    $(LOCAL_PATH)/init.p3.usb.rc:root/init.p3.usb.rc
+    $(LOCAL_PATH)/rootdir/init.p3.rc:root/init.p3.rc \
+    $(LOCAL_PATH)/rootdir/fstab.p3:root/fstab.p3 \
+    $(LOCAL_PATH)/rootdir/ueventd.p3.rc:root/ueventd.p3.rc \
+    $(LOCAL_PATH)/rootdir/lpm.rc:root/lpm.rc \
+    $(LOCAL_PATH)/rootdir/init.p3.usb.rc:root/init.p3.usb.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media_profiles.xml:system/etc/media_profiles.xml \
