@@ -28,6 +28,7 @@ TARGET_SCREEN_HEIGHT := 800
 PRODUCT_COPY_FILES := \
     $(LOCAL_PATH)/rootdir/init.p3.rc:root/init.p3.rc \
     $(LOCAL_PATH)/rootdir/fstab.p3:root/fstab.p3 \
+    $(LOCAL_PATH)/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab \
     $(LOCAL_PATH)/rootdir/ueventd.p3.rc:root/ueventd.p3.rc \
     $(LOCAL_PATH)/rootdir/lpm.rc:root/lpm.rc \
     $(LOCAL_PATH)/rootdir/init.p3.usb.rc:root/init.p3.usb.rc
