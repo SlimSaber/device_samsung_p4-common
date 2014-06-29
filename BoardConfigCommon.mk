@@ -43,12 +43,19 @@ TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfpu=vfpv3-d16 -mfloat-abi=softfp
 # Build rom using SaberMod 4.9 toolchain
 USE_SABERMOD_ANDROIDEABI_49 := true
 TARGET_GCC_VERSION_EXP := 4.9
-TARGET_USE_O3 := true
 STRICT_ALIASING := true
 SUPPRES_UNUSED_WARNING := true
 OPT_MEMORY := true
 BOOT_ZIP_OUT_FILE := SlimKernel-$(TARGET_DEVICE)-$(shell date +"%Y%m%d")
 RECOVERY_ZIP_OUT_FILE := SlimRecovery-$(TARGET_DEVICE)-$(shell date +"%Y%m%d")
+
+ifeq ($(BUILDING_RECOVERY),true)
+    TARGET_USE_O3 := false
+    TARGET_KERNEL_CUSTOM_TOOLCHAIN := "arm-eabi-4.6/bin/arm-eabi-"
+else
+    TARGET_USE_O3 := true
+    TARGET_KERNEL_CUSTOM_TOOLCHAIN := 
+endif
 
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_CMDLINE := 
