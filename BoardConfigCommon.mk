@@ -46,7 +46,7 @@ TARGET_GCC_VERSION_EXP := 4.9
 STRICT_ALIASING := true
 SUPPRES_UNUSED_WARNING := true
 OPT_MEMORY := true
-BOOT_ZIP_OUT_FILE := SlimKernel-$(TARGET_DEVICE)-$(shell date +"%Y%m%d")
+BOOT_ZIP_OUT_FILE := SlimKernel-$(TARGET_DEVICE)-$(PLATFORM_VERSION)-$(shell date +"%Y%m%d")
 RECOVERY_ZIP_OUT_FILE := SlimRecovery-$(TARGET_DEVICE)-$(shell date +"%Y%m%d")
 
 ifeq ($(BUILDING_RECOVERY),true)
